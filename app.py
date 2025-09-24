@@ -38,7 +38,7 @@ st.markdown(
     """
     <style>
         .card {
-            background-color: #f8f8f8;
+            background-color: #DFF6E4;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -60,5 +60,6 @@ if texto.strip() != "":
         codigo = linguas[nome]
         traducao = GoogleTranslator(source='pt', target=codigo).translate(texto)
         st.markdown(f'<div class="card"><h3>➡ Tradução para {nome}</h3><p><strong>Original:</strong> {texto}</p><p><strong>Traduzido:</strong> {traducao}</p></div>', unsafe_allow_html=True)
+
 
 
