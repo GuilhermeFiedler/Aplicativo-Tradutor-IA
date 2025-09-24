@@ -1,7 +1,7 @@
 import streamlit as st
 from deep_translator import GoogleTranslator
 
-st.title("🌍 Tradutor Multilíngue com Deep Translator")
+st.title("🗺️Tradutor Multilíngue🗺️")
 
 #Área de textos
 texto = st.text_area(" Digite sua frase em português:", 
@@ -13,7 +13,8 @@ linguas = {
     "Espanhol": "es",
     "Francês": "fr",
     "Alemão": "de",
-    "Italiano": "it"
+    "Italiano": "it",
+    "Coreano": "kr"
 }
 
 idiomas_escolhidos = st.multiselect("Selecione os idiomas de destino:", list(linguas.keys()), ["Inglês", "Espanhol"])
@@ -30,3 +31,4 @@ if st.button("Traduzir"):
             st.write(f'**Original:** {texto}')
             st.write(f'**Traduzido:** {traducao}')
             st.write("---")
+
