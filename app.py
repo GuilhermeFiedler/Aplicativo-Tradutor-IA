@@ -1,6 +1,8 @@
 import streamlit as st
 from deep_translator import GoogleTranslator
 
+st.set_page_config(page_title="Tradutor Multilíngue", page_icon="🌍", layout="wide")
+
 st.title("🗺️Tradutor Multilíngue🗺️")
 
 #Área de textos
@@ -31,4 +33,5 @@ if st.button("Traduzir"):
             st.write(f'**Original:** {texto}')
             st.write(f'**Traduzido:** {traducao}')
             st.write("---")
+
 
