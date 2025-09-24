@@ -34,4 +34,31 @@ if st.button("Traduzir"):
             st.write(f'**Traduzido:** {traducao}')
             st.write("---")
 
+st.markdown(
+    """
+    <style>
+        .card {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            color: #00796b;  /* Teal color for heading */
+        }
+        .card p {
+            font-size: 1.1em;
+            color: #424242;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
+if texto.strip() != "":
+    for nome in idiomas_escolhidos:
+        codigo = linguas[nome]
+        traducao = GoogleTranslator(source='pt', target=codigo).translate(texto)
+        st.markdown(f'<div class="card"><h3>➡ Tradução para {nome}</h3><p><strong>Original:</strong> {texto}</p><p><strong>Traduzido:</strong> {traducao}</p></div>', unsafe_allow_html=True)
+
 
