@@ -45,7 +45,7 @@ st.markdown(
             margin-bottom: 15px;
         }
         .card h3 {
-            color: #00796b;  /* Teal color for heading */
+            color: #00796b;  
         }
         .card p {
             font-size: 1.1em;
@@ -60,6 +60,7 @@ if texto.strip() != "":
         codigo = linguas[nome]
         traducao = GoogleTranslator(source='pt', target=codigo).translate(texto)
         st.markdown(f'<div class="card"><h3>➡ Tradução para {nome}</h3><p><strong>Original:</strong> {texto}</p><p><strong>Traduzido:</strong> {traducao}</p></div>', unsafe_allow_html=True)
+
 
 
 
